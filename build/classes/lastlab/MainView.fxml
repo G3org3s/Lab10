@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.CheckMenuItem?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioMenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane id="AnchorPane" fx:id="mainPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/25" fx:controller="lastlab.MainViewController">
+   <children>
+      <MenuBar layoutX="234.0" layoutY="2.0">
+        <menus>
+          <Menu text="_File">
+            <items>
+                  <MenuItem id="newItem" fx:id="newItem" mnemonicParsing="false" onAction="#handleNew" text="New" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem id="openItem" fx:id="openItem" mnemonicParsing="false" onAction="#handleOpen" text="Open..." />
+                  <MenuItem id="closeItem" fx:id="closeItem" mnemonicParsing="false" onAction="#handleClose" text="Close" />
+                  <MenuItem id="saveItem" fx:id="saveItem" mnemonicParsing="false" text="Save As..." />
+            </items>
+          </Menu>
+          <Menu text="_Edit">
+            <items>
+                  <CheckMenuItem id="gridItem" fx:id="gridItem" mnemonicParsing="false" onAction="#handleGrid" text="Use GridLines" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem id="copyItem" fx:id="copyItem" mnemonicParsing="false" onMenuValidation="#handleCopy" text="Copy" />
+                  <Menu id="seachMenu" mnemonicParsing="false" text="Search">
+                    <items>
+                      <MenuItem id="findItem" fx:id="findItem" mnemonicParsing="false" onAction="#handleFind" text="Find" />
+                        <MenuItem id="replaceItem" fx:id="replaceItem" mnemonicParsing="false" onAction="#handleReplace" text="Replace" />
+                    </items>
+                  </Menu>
+            </items>
+          </Menu>
+          <Menu text="_Settings">
+            <items>
+                  <RadioMenuItem id="smallItem" fx:id="smallItem" mnemonicParsing="false" onAction="#handleSizeSmall" text="Small" />
+                  <RadioMenuItem id="mediumItem" fx:id="mediumItem" mnemonicParsing="false" onAction="#handleSizeMedium" text="Medium" />
+                  <RadioMenuItem id="largeItem" fx:id="largeItem" mnemonicParsing="false" onAction="#handleSizeLarge" text="Large" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </children>
+</AnchorPane>
